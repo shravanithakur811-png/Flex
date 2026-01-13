@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sample Flexbox Example</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#f2f2f2;
+    padding:30px;
+}
+
+/* Wrapper */
+.container{
+    max-width:1000px;
+    margin:auto;
+}
+
+/* Header */
+.header{
+    background:#6A1B9A;   /* purple */
+    color:white;
+    text-align:center;
+    padding:20px;
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+/* Articles container */
+.articles{
+    display:flex;
+    gap:20px;
+}
+
+/* Article box */
+.article{
+    background:#4DD0E1;   /* cyan */
+    padding:20px;
+    flex:1;
+}
+
+.article h3{
+    margin-bottom:10px;
+}
+
+/* ---------- Mobile View ---------- */
+@media (max-width:768px){
+    .articles{
+        flex-direction:column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<h3 style="text-align: center;">Mobile View and Laptop View:</h3>
+
+<div class="container">
+    <div class="header">Sample flexbox example</div>
+
+    <div class="articles">
+        <div class="article">
+            <h3>First article</h3>
+            <p>
+                Tacos actually microdosing, pour-over semoitics banjo
+                chicharrones retro fanny pack portland everyday carry
+                vinyl typewriter.
+            </p>
+        </div>
+
+        <div class="article">
+            <h3>Second article</h3>
+            <p>
+                Tacos actually microdosing, pour-over semoitics banjo
+                chicharrones retro fanny pack portland everyday carry
+                vinyl typewriter.
+            </p>
+        </div>
+
+        <div class="article">
+            <h3>Third article</h3>
+            <p>
+                Tacos actually microdosing, pour-over semoitics banjo
+                chicharrones retro fanny pack portland everyday carry
+                vinyl typewriter. Organic small batch palo santo.
+            </p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
